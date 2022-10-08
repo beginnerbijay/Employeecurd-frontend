@@ -8,7 +8,7 @@ const Home = () => {
   const { show, setshow } = useContext(UserContext);
   const getdata =async()=>{
     try{
-      const res = await fetch("http://localhost:8000/",{
+      const res = await fetch("https://employee-panel-api.onrender.com/",{
             method:"GET",
             headers:{
               'Content-Type':'application/json'

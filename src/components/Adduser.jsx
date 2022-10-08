@@ -79,7 +79,7 @@ const Adduser = () => {
     formdata.append('add',state.add);
     try{
       if(state.fname && state.lname &&  state.sex && state.age && state.salary && state.phone && state.email && state.job && state.add){
-        const url= "http://localhost:8000/adduser/"
+        const url= "https://employee-panel-api.onrender.com/adduser/"
         const res = await axios.post(url,formdata);
         if(res.status == 422){
           alert('invalid')

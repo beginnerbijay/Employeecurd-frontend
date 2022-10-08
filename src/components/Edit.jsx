@@ -55,7 +55,7 @@ const Edit = () => {
 
   const getdata =async()=>{
     try{
-      const res = await fetch(`http://localhost:8000/user/${id}`,{
+      const res = await fetch(`https://employee-panel-api.onrender.com/${id}`,{
             method:"GET",
             headers:{
               'Content-Type':'application/json'
