@@ -154,7 +154,7 @@ const onchange = async(e) =>{
   </div>
   <div className="form-group">
     <label >Profile Pic</label>
-    <input type="file" className="form-control" placeholder="upload pic" accect='.jpg .png .jpeg' name='image' onChange={setpic}/>
+    <input type="file" className="form-control" placeholder="upload pic" accect='.jpg .png .jpeg' name='image' onChange={setpic} value={state.image}/>
   </div>
   <button type="submit" className="btn btn-primary mt-2 mb-3 px-5 py-1" onClick={onchange}>Edit</button>
   <ToastContainer/>
