@@ -90,7 +90,7 @@ const onchange = async(e) =>{
     formdata.append('job',state.job);
     formdata.append('add',state.add);
   try{
-  const res = await axios.patch(`http://localhost:8000/edit/${id}`,formdata);
+  const res = await axios.patch(`https://employee-panel-api.onrender.com/edit/${id}`,formdata);
   const responce =  res.data;
   if(res.status === 422){
      console.log("invalid")
