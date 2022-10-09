@@ -37,6 +37,9 @@ const Adduser = () => {
     draggable: true,
     progress: undefined,
     });
+    setTimeout(() => {
+      nav("/") 
+    },2000);
  }
     
 

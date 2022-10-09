@@ -23,16 +23,20 @@ const User = () => {
       draggable: true,
       progress: undefined,
       });
+      setTimeout(() => {
+        nav("/") 
+      },2000);
    }
   const getdata =async()=>{
     try{
       const res = await axios.get(`https://employee-panel-api.onrender.com/user/${id}`);
       const responce = res.data;
+      console.log(responce)
       if(res.status === 422){
          console.log("invalid")
       }else{
         console.log("rendering successful");
-        setimagepath(`https://employee-panel-api.onrender.com/user/${responce.image}`)
+        setimagepath(`https://employee-panel-api.onrender.com/images/${responce.image}`)
         if(responce.image){
           setimageshow(true)
         }else{
