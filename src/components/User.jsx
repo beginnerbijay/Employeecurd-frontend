@@ -26,13 +26,13 @@ const User = () => {
    }
   const getdata =async()=>{
     try{
-      const res = await axios.get(`https://employee-panel-api.onrender.com/${id}`);
+      const res = await axios.get(`https://employee-panel-api.onrender.com/user/${id}`);
       const responce = res.data;
       if(res.status === 422){
          console.log("invalid")
       }else{
         console.log("rendering successful");
-        setimagepath(`https://employee-panel-api.onrender.com/${responce.image}`)
+        setimagepath(`https://employee-panel-api.onrender.com/user/${responce.image}`)
         if(responce.image){
           setimageshow(true)
         }else{
